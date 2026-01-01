@@ -1,0 +1,192 @@
+#blog-section>h2{font-size:60px;font-weight:700;color:#ababab;text-align:center;margin-bottom:20px;position:relative}
+#blog-section .tab-titles{display:flex;justify-content:center;gap:200px;margin-bottom:35px}
+#blog-section .tab-links{font-size:28px;color:#fff;font-weight:700;cursor:pointer;padding-bottom:5px;transition:all .3s ease}
+#blog-section .tab-links.active-link{color:#00BFFF;border-bottom:3px solid #00BFFF}
+#blog-section .tab-content{margin-top:30px}
+#blog-section .blog-post{background-color:#222;padding:25px 20px;margin:20px auto;max-width:800px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.3);transition:transform .3s,box-shadow .3s}
+#blog-section .blog-post:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.5)}
+#blog-section .blog-post h3{font-size:28px;font-weight:700;color:#00BFFF;margin-bottom:15px}
+#blog-section .blog-post p{color:#fff;line-height:1.6;font-size:19px;margin-bottom:20px}
+#blog-section .blog-post p::first-letter{font-size:60px;font-weight:700;color:#00BFFF;float:left;margin-right:12px;line-height:1}
+
+
+#blog-section {
+  width: 100%;
+  min-height: 100vh; /* full viewport height */
+  padding: calc(var(--nav-height, 60px) + 40px) 10%;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   THEME VARIABLES
+================================ */
+:root {
+  --accent: #00BFFF;
+  --bg-card: #1b1b2f;
+  --bg-card-dark: #160b3b;
+  --text-main: #ffffff;
+  --text-muted: #cfc9ff;
+  --text-meta: #9f98d1;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+
+  --transition: 0.3s ease;
+}
+
+
+/* ===============================
+   TAGS
+================================ */
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: inline-block;       /* width fits the text */
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.tag:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===============================
+   BLOG HEADER
+================================ */
+.blog-subtitle {
+  font-size: 1.2rem;
+  color: #ababab;
+  margin-bottom: 1rem;
+}
+
+
+/* ===============================
+   BLOG GRID
+================================ */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
+  gap: 2.5rem;
+}
+
+
+/* ===============================
+   BLOG CARD (PREVIEW)
+================================ */
+.blog-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;        /* stack content vertically */
+  justify-content: space-between; /* push tags to the bottom */
+  height: 100%;                  /* fill container height */
+
+  background: var(--bg-card-dark);
+  color: var(--text-main);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Title */
+.blog-card h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ffffffd8;
+  line-height: 1.4;
+}
+
+/* Paragraph (clamped to 5 lines) */
+.blog-card p {
+  font-size: 0.95rem;
+  margin-bottom: 50px;
+  color: #ababab;
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+
+/* ===============================
+   CARD CONTENT (optional for blog details)
+================================ */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--text-meta);
+  margin-bottom: 1.2rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.card-tags span {
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+
+/* ===============================
+   FULL ARTICLE VIEW
+================================ */
+.full-article {
+  margin-top: 3rem;
+  background: var(--bg-card-dark);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ===============================
+   UTILITIES
+================================ */
+.hidden {
+  display: none;
+}

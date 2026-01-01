@@ -1,0 +1,61 @@
+/* ============================================== */
+/* HEADER TEXT - RESPONSIVE                       */
+/* ============================================== */
+.header-text {
+  margin-top: 100px;
+  margin-left: -5%;
+  max-width: 600px;
+  opacity: 0;
+  transform: none;
+  animation: fadeInUp 1s ease forwards;
+  z-index: 10;
+  position: relative;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-text p,
+.header-text h1,
+.header-text h2, 
+.header-text h3 {
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.header-text p:first-child{
+  color: #ababab;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.header-text p{
+  color: #ababab;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.header-text h1 {
+  font-size: 3.6rem;
+  color: #1f80ff;
+  font-weight: 700;
+}
+
+.header-text h2 {
+  font-size: 3rem;
+  color: #fff ;
+  font-weight: 600;
+}
+.header-text h3 {
+  font-size: 1.8rem;
+  color: #919191;
+  font-weight: 600;
+}
+.header-text .monospace {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+

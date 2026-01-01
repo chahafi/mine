@@ -1,0 +1,193 @@
+/* ==========================================================
+   CONTACT SECTION - ENHANCED
+   ========================================================== */
+#contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: none;
+  box-sizing: border-box;
+  padding: 20px 20px;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* ------------------- Title ------------------- */
+.contact-title {
+  font-size: 3.5rem;               
+  font-weight: 700;                            
+  letter-spacing: 1px;             
+  color: #ababab; /* simple gray text */
+}
+
+.contact-title span {
+  color: #ffffff; /* white for the span text */
+}
+
+
+/* ------------------- Contact Form ------------------- */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0e6f0;
+  text-align: left;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 191, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Gantari', sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00bfff;
+  background: rgba(0, 191, 255, 0.08);
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.15); /* lighter, smaller shadow */
+  transform: translateY(-2px);
+}
+
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* ------------------- Send Button ------------------- */
+.btn-send {
+  align-self: center;
+  padding: 10px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #00bfff 0%, #0099cc 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.25); /* reduced shadow */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.btn-send::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn-send:hover::before {
+  left: 100%;
+}
+
+.btn-send:hover {
+  background: linear-gradient(135deg, #0099cc 0%, #007acc 100%);
+  transform: translateY(-2px); /* slightly less lift */
+  box-shadow: 0 6px 18px rgba(0, 191, 255, 0.3); /* reduced hover shadow */
+}
+
+.btn-send:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 3px 10px rgba(0, 191, 255, 0.2); /* optional: lighter on click */
+}
+
+/* ------------------- Social Links ------------------- */
+.contact-social {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+/* Simple icon links */
+.contact-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0e6f0;
+  font-size: 1.6rem;
+  background: transparent !important; /* force no background */
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect only on icon */
+.contact-social a:hover {
+  color: #00bfff;
+  transform: translateY(-3px);
+}
+
+/* ------------------- Signature ------------------- */
+.signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  margin-top: -10px;
+}
+
+
+.signature img {
+  width: 180px;
+  height: auto;
+  display: block;
+
+}
+
+/* ------------------- Animations ------------------- */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

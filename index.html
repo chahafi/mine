@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+<nav class="fade-in-top">
+  <img src="images/my logo sans backgound.png" alt="logo" class="logo fade-in-top" id="logo">
+  
+  <!-- HAMBURGER ICON -->
+  <i class="fas fa-bars" onclick="toggleMenu()"></i>
+  
+  <!-- X ICON - NOW OUTSIDE THE UL -->
+  <i class="fas fa-circle-xmark" onclick="toggleMenu()"></i>
+  
+  <ul id="sidemenu" class="fade-in-top">
+    <li><a href="#header" id="home-link" class="active" onclick="toggleMenu()">Home</a></li>
+    <li><a href="#about" id="about-link" onclick="toggleMenu()">About</a></li>
+    <li><a href="#experience-section" id="experience-link" onclick="toggleMenu()">Experience</a></li>
+    <li><a href="#projects-section" id="projects-link" onclick="toggleMenu()">Projects</a></li>
+    <li><a href="#" id="blog-link" onclick="toggleMenu()">Blog</a></li>
+    <li><a href="#contact" id="contact-link" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</nav>
+
+
+ <!-- 🔹 HEADER SECTION -->
+<div id="header" class="section-content">
+  <div class="container">
+
+    <!-- 🔹 HEADER TEXT -->
+    <div class="header-text fade-in">
+      <p>Hi, I'm</p>
+      <h1>Yassmine CHAHAFI.</h1>
+      <h2>Mechanical Engineer.</h2>
+      <h3 class="tagline fade-in-delayed">
+          <strong> Engineer</strong> in method. <strong> Writer</strong> in soul.
+      </h3>
+      <p>I’m a junior mechanical engineer with <strong>experience</strong> across <strong>multiple industries</strong> , <br> from <strong> automotive to aerospace</strong> and beyond.</p>
+      <div class="buttons fade-in-delayed">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <button class="btn btn-outline" id="resumeBtn">Resume</button>
+      </div>
+    </div>
+
+    <!-- 🔹 HEADER PHOTO -->
+    <div class="header-photo-wrapper">
+      <img src="images/MEEEEEEEEEEEEE.png" class="header-photo" alt="Yassmine Chahafi">
+    </div>
+
+  </div>
+
+  <!-- 🔹 RESUME MODAL -->
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <h2>Resume Language</h2>
+      <p>Choose your preferred language to view my resume</p>
+
+      <div class="language-options">
+        <a href="images/CV_Englais_Groupe_YASSMINE_CHAHAFI_PFE.pdf" target="_blank" class="lang-btn">
+          <strong>English</strong><br><span>English</span>
+        </a>
+
+        <a href="images/CV_Groupe_Yassmine _CHAHAFI_PFE.pdf" target="_blank" class="lang-btn">
+          <strong>French</strong><br><span>Français</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="company-logos-wrapper">
+  <div class="company-logos fade-in-delayed">
+    <img src="images/YAZAKI BLANC.png" alt="Yazaki">
+    <img src="images/STELLANTIS BLANC.png" alt="Stellantis">
+    <img src="images/SEGULA BLANC.png" alt="Segula">
+    <img src="images/safran BLANC .png" alt="Safran">
+    <!-- duplicate logos for smooth infinite scroll -->
+    <img src="images/YAZAKI BLANC.png" alt="Yazaki">
+    <img src="images/STELLANTIS BLANC.png" alt="Stellantis">
+    <img src="images/SEGULA BLANC.png" alt="Segula">
+    <img src="images/safran BLANC .png" alt="Safran">
+  </div>
+</div>
+
+ <!-----------------------ABOUT---------------------------------------------------->   
+<div id="about" class="section-content">
+  <div class="container">
+
+    <h1 class="sub-title">About Me</h1>
+
+    <div class="about-text">
+      <p>Hi, I’m Yassmine. My journey in engineering began with tiny robots, line followers and automated arms, that I built and programmed just for the thrill of seeing ideas come to life. That spark led me to specialize in Mechanical Engineering, the heart of innovation, where a sketch on paper can become a real, working creation.</p>
+
+      <p>But I’m not just about engineering, I’m a storyteller at heart. With a background in literature and philosophy, I’ve learned to observe the world closely, ask thoughtful questions, and explore ideas from multiple perspectives. Writing and reading have taught me the power of narrative and creativity, and I often see engineering challenges as stories waiting to unfold each component, each design, a character in a larger plot. This blend of analytical precision and imaginative thinking lets me approach problems with curiosity and empathy, envision solutions beyond the obvious, and communicate complex ideas clearly.</p>
+
+      <p>Combining these two worlds mechanical precision and creative critical thinking has given me the vision and skills to turn concepts into reality, lead projects with purpose, and always ask: <br> <span class="highlight-bold">What if we could make it better?</span></p>
+    </div>
+
+    <!-- Tabs Section -->
+    <div class="tab-titles">
+  <span class="tab-links active-link"
+        onclick="openTab('Academic Skills', this)">Academic Skills</span>
+
+  <span class="tab-links"
+        onclick="openTab('Non-Academic Skills', this)">Non-Academic Skills</span>
+
+  <span class="tab-links"
+        onclick="openTab('Education', this)">Education</span>
+</div>
+
+    <!-- Academic Skills -->
+    <div class="tab-contents active-tab" id="Academic Skills">
+      <div class="skill-section">
+        <span class="skill-title">Mechanical Design & Materials</span>
+        <div class="software-list">
+          <div class="software-item">SolidWorks</div>
+          <div class="software-item">CATIA</div>
+          <div class="software-item">AutoCAD</div>
+          <div class="software-item">Fusion 360</div>
+          <div class="software-item">CES Granta EDUPACK</div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <span class="skill-title">Numerical Simulation</span>
+        <div class="software-list">
+          <div class="software-item">Abaqus</div>
+          <div class="software-item">ANSYS</div>
+          <div class="software-item">LS-Dyna</div>
+          <div class="software-item">ANSA</div>
+          <div class="software-item">OpenFoam</div>
+          <div class="software-item">MATLAB</div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <span class="skill-title">Manufacturing & Management</span>
+        <div class="software-list">
+          <div class="software-item">Project Management</div>
+          <div class="software-item">Quality</div>
+          <div class="software-item">Maintenance</div>
+          <div class="software-item">Lean Management & Six Sigma</div>
+          <div class="software-item">Agile & Scrum</div>
+          <div class="software-item">Continuous Improvement</div>  
+          <div class="software-item">Process Optimization</div>
+         <div class="software-item">Industrial Automation</div>
+         <div class="software-item">Supply Chain Management</div>  
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <span class="skill-title">Programming & Office Tools</span>
+        <div class="software-list">
+          <div class="software-item">Python</div>
+          <div class="software-item">C++</div>
+          <div class="software-item">SQL</div>
+          <div class="software-item">VBA</div>
+          <div class="software-item">LaTeX</div>
+          <div class="software-item">Office 365</div>
+          <div class="software-item">Google Workspace</div>
+          <div class="software-item">Adobe Suite</div>
+        </div>
+      </div>
+
+      <div class="skill-section">
+        <span class="skill-title">Automation & Robotics</span>
+        <div class="software-list">
+          <div class="software-item">Arduino</div>
+          <div class="software-item">Raspberry Pi</div>
+          <div class="software-item">PID Control</div>
+          <div class="software-item">Ladder Logic</div>
+          <div class="software-item">Grafcet</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Non-Academic Skills -->
+    <div class="tab-contents" id="Non-Academic Skills">
+      <div class="software-list">
+        <div class="software-item">Literature & Philosophy</div>
+        <div class="software-item">Writing & Storytelling</div>
+        <div class="software-item">Voice Over</div>
+        <div class="software-item">Public Speaking</div>
+        <div class="software-item">Music Composition</div>
+        <div class="software-item">Licensed Tennis Player – FRMT</div>
+        <div class="software-item">Photography</div>
+        <div class="software-item">Filmmaking</div>
+        <div class="software-item">Guitar Player</div>
+        <div class="software-item">Professional Event Organizer</div>
+
+      </div>
+    </div>
+
+ <!-- Education -->
+<div class="tab-contents" id="Education">
+  
+  <div class="software-item-02">Mechanical Engineering Diploma</div>
+  <ul>
+    <li>
+      <span class="school">National School of Applied Sciences</span>
+      <span class="date">2021 - 2026</span>
+      <p>My engineering journey at this school has allowed me to explore diverse and stimulating courses, from mathematics to physics, laying the groundwork for my technical skills and professional growth. I specialized in Mechanical Engineering, which enabled me to deepen my understanding of mechanical design and analysis, material science, and industrial management while developing practical problem-solving abilities essential for my career.</p>    
+    </li>
+  </ul>
+
+  <div class="software-item-02">Baccalaureate Diploma in Physical Sciences</div>
+  <ul>
+    <li>
+      <span class="school">Highly qualified high school</span>
+      <span class="date">2020 - 2021</span>
+      <p>I earned my Baccalaureate in Physical Sciences with Very Honorable distinction. This achievement reflects my strong commitment to scientific studies and has provided me with a solid foundation in physics, chemistry, and mathematics, preparing me for future academic and professional pursuits in the engineering field.</p>
+    </li>
+  </ul>
+  
+</div>
+    </div>
+
+  </div>
+</div>
+
+<!-------------------------Experiences------------------------------------------------>
+<section id="experience-section" class="section-content">
+  <h1 class="section-title animate-on-scroll">Professional Experience</h1>
+
+  <div class="timeline">
+    <!-------------------Internship 1: SAFRAN -------------------------------->
+    <div class="timeline-item left pop-up">
+      <div class="timeline-icon aerospace">
+        <i class="fa-solid fa-jet-fighter"></i>
+      </div>
+      <div class="exp-header">
+        <div class="exp-logo">
+          <img src="images/safran.png" alt="Safran logo" />
+        </div>
+        <div class="timeline-content">
+          <h1>Aeronautical Design Office Engineer</h1>
+          <h2>Safran Engineering Services</h2>
+          <h3>Optimization of the FAI (First Article Inspection) Process.</h3>
+          <div class="date"><i class="fa-solid fa-calendar"></i> July – August 2025</div>
+        </div>
+      </div>
+      <div class="skills">
+        <button class="skill-btn">FAI</button>
+        <button class="skill-btn">Optimization</button>
+        <button class="skill-btn">EHF/EHI</button>
+        <button class="skill-btn">Reliability</button>
+      </div>
+      <button class="see-more-btn" data-modal="modal1">See More</button>
+    </div>
+
+    <!-- Internship 2: SEGULA Battery Protection -->
+    <div class="timeline-item right pop-up">
+      <div class="timeline-icon automo">
+        <i class="fa-solid fa-car"></i>
+      </div>
+      <div class="exp-header">
+        <div class="exp-logo">
+          <img src="images/segula.png" alt="SEGULA logo" />
+        </div>
+        <div class="timeline-content">
+          <h1>Automotive Design Office Engineer</h1>
+          <h2>SEGULA Technologies</h2>
+          <h3>Engineering of a protective housing for electric vehicle batteries.</h3>
+          <div class="date"><i class="fa-solid fa-calendar"></i> March – June 2025</div>
+        </div>
+      </div>
+      <div class="skills">
+        <button class="skill-btn">Structural Design</button>
+        <button class="skill-btn">Crash Analysis</button>
+        <button class="skill-btn">Material Selection</button>
+        <button class="skill-btn">3D Printing</button>
+      </div>
+      <button class="see-more-btn" data-modal="modal2">See More</button>
+    </div>
+
+    <!-- Internship 3: STELLANTIS Water Leakage -->
+    <div class="timeline-item left pop-up">
+      <div class="timeline-icon automo">
+        <i class="fa-solid fa-car"></i>
+      </div>
+      <div class="exp-header">
+        <div class="exp-logo">
+          <img src="images/Stellantis.png" alt="Stellantis logo" />
+        </div>
+        <div class="timeline-content">
+          <h1>Production Process & Quality Engineer</h1>
+          <h2>Stellantis</h2>
+          <h3>Analysis and Resolution of Water Leakage Defects on AMIs.</h3>
+          <div class="date"><i class="fa-solid fa-calendar"></i> July – August 2024</div>
+        </div>
+      </div>
+      <div class="skills">
+        <button class="skill-btn">Quality Control</button>
+        <button class="skill-btn">Design</button>
+        <button class="skill-btn">Lean Manufacturing</button>
+         <button class="skill-btn">Root Cause Analysis</button>
+      </div>
+      <button class="see-more-btn" data-modal="modal3">See More</button>
+    </div>
+
+    <!-- Internship 4: YAZAKI Sliding System -->
+    <div class="timeline-item right pop-up">
+      <div class="timeline-icon automo">
+        <i class="fa-solid fa-industry"></i>
+      </div>
+      <div class="exp-header">
+        <div class="exp-logo">
+          <img src="images/yazaki.png" alt="YAZAKI logo" />
+        </div>
+        <div class="timeline-content">
+          <h1>Product Design & Maintenance Engineer</h1>
+          <h2>YAZAKI</h2>
+          <h3>Design of a "Sliding System" to Optimize Production Time.</h3>
+          <div class="date"><i class="fa-solid fa-calendar"></i> July – August 2023</div>
+        </div>
+      </div>
+      <div class="skills">
+        <button class="skill-btn">Structural Design</button>
+        <button class="skill-btn">Process Optimization</button>
+        <button class="skill-btn">Maintenance Planning</button>
+      </div>
+      <button class="see-more-btn" data-modal="modal4">See More</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SAFRAN Modal ================= -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Safran Engineering Services – FAI Optimization</h2>
+
+    <p>During my internship, I contributed across four main activities within the Mechanical Engineering department:</p>
+
+    <h3>Flat Pattern</h3>
+    <p>Preparation of electrical harnesses by arranging wires and connectors according to a defined layout to ensure compliance, inspection, and control. I practiced this on <strong>CATIA V5</strong> using the EHF and EHI libraries.</p>
+
+    <h3>Reliability (Fiabilité)</h3>
+    <p>Discovery of in-service reliability monitoring for SAFRAN AEROSPACE equipment and observation of the alert process managed by the product support engineer in cases of contractual non-compliance (MTBF/MTBUR) or significant reliability drops. I also learned about core activities such as <em>DOUBLONS, RSG, SPECHTEMIE</em>, and the <em>TOPASE</em> tool.</p>
+
+    <h3>Part Master</h3>
+    <p>Introduction to a relational database management system, where I worked with the <strong>ERP M3</strong> platform.</p>
+
+    <h3>FAI (First Article Inspection)</h3>
+    <p>The core of my project: <strong>Optimization of the FAI Process</strong>. FAI ensures compliance with technical specifications and customer requirements before serial production. It validates manufacturers’ and suppliers’ mastery of requirements and allows early detection of deviations.</p>
+    <ul>
+      <li>Optimizing the process to ease new team integration and enhance reliability.</li>
+      <li>Developing documented procedures and global checklists for consistency.</li>
+      <li>Using the <strong>Agile PLM platform</strong> and inspection files for comprehensive documentation.</li>
+      <li>Applying this framework to international projects, including Safran UK.</li>
+    </ul>
+
+    <h3>Additional Information</h3>
+    <ul>
+      <li><strong>Tools:</strong> CATIA V5 (EHF/EHI), Excel VBA, Quality reports, ERP, TOPASE, SAP, Agile.</li>
+      <li><strong>Department:</strong> Mechanical.</li>
+    </ul>
+
+    <h3>Photos</h3>
+    <p>Click on any image below to view it in full-screen.</p>
+    <div class="modal-photo-grid">
+      <img src="images/safranME.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/safranPPT.png" alt="Photo 2" class="lightbox-img-trigger">
+      <img src="images/safranREPORT.png" alt="Photo 3" class="lightbox-img-trigger">
+      <img src="images/mise aplat 2d.png" alt="Photo 4" class="lightbox-img-trigger">
+    </div>
+  </div>
+</div>
+
+<!-- ================= SEGULA Modal ================= -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>SEGULA Technologies – Battery Protection Engineering</h2>
+    <p>I conducted a comprehensive innovation process, from needs analysis to development of a technical solution integrating mechanical and industrial criteria.</p>
+
+    <h3>The methodology behind the project realisation:</h3>
+    <ul>
+      <li><strong>Benchmarking:</strong> Analysis of existing solutions and technologies related to side-impact protection for electric vehicle batteries.</li>
+      <li><strong>Mechanical Design:</strong> Initial mechanical designs for Alpha and honeycomb models using CATIA V5.</li>
+      <li><strong>Material Replacement:</strong> CFRP composite (Epoxy/HS carbon fiber) used for better energy absorption.</li>
+      <li><strong>Numerical Crash Analysis:</strong> Finite Element simulations assessed lateral impact behavior.</li>
+      <li><strong>Honeycomb Sandwich Redesign:</strong> Epoxy/Carbon Fiber panels with aluminum honeycomb core improved stiffness and crash energy management.</li>
+      <li><strong>3D-Printed Prototype:</strong> Scaled prototype validated design geometry and manufacturability.</li>
+      <li><strong>Conclusion:</strong> Optimal balance of performance, safety, and industrial feasibility.</li>
+    </ul>
+
+    <h3>Additional Information</h3>
+    <ul>
+      <li><strong>Tools:</strong> CATIA V5, MS Project, Abaqus, ANSA, LS Dyna, Granta Edupack.</li>
+      <li><strong>Department:</strong> Technical and R&D</li>
+    </ul>
+
+    <h3>Photos</h3>
+    <p>Click on any image below to view it in full-screen.</p>
+    <div class="modal-photo-grid">
+      <img src="images/soutenanceUS.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/segulaRAPPORT.jpg" alt="Photo 3" class="lightbox-img-trigger">
+      <img src="images/soutenanceME.jpg" alt="Photo 2" class="lightbox-img-trigger">
+      <img src="images/cfrp honey von mises.png" alt="Photo 4" class="lightbox-img-trigger">
+      <img src="images/segulaME.jpg" alt="Photo 4" class="lightbox-img-trigger">
+      <img src="images/segulaPPT.png" alt="Photo 5" class="lightbox-img-trigger">
+      <img src="images/fablabME.jpg" alt="Photo 6" class="lightbox-img-trigger">
+      <img src="images/alpha 3D.png" alt="Photo 7" class="lightbox-img-trigger">
+      <img src="images/honey camb 3D.png" alt="Photo 8" class="lightbox-img-trigger">
+    </div>
+  </div>
+</div>
+
+<!-- ================= STELLANTIS Modal ================= -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>STELLANTIS – Analysis and Resolution of Water Leakage Defects on AMI Vehicle</h2>
+    <p>Project focused on the systematic analysis, resolution, and continuous improvement of water leakage defects on AMI vehicles at stations ST40 & ST40’, ensuring robust vehicle sealing performance and production reliability.</p>
+
+    <h3>The methodology behind the project realisation:</h3>
+<ul>
+  <li><strong>Process Understanding & Industrialization:</strong> Acquired an in depth understanding of assembly, sealing, and production operations for both Peugeot 208 and AMI lines. Identified critical stages prone to leakage and evaluated opportunities for standardization and industrialization of sealing processes.</li>
+  
+  <li><strong>Defect Inspection & Problem Analysis (DMAIC):</strong> Applied the DMAIC methodology (Define, Measure, Analyze, Improve, Control) to systematically investigate water ingress issues. Utilized quality tools including Pareto charts, Ishikawa diagrams, and FMEA to identify root causes related to material handling, assembly procedures, and component tolerances.</li>
+  
+  <li><strong>Corrective & Preventive Actions:</strong> Designed and implemented targeted solutions, including sealing process adjustments, control checkpoints, and operator training. These measures improved defect detection, ensured repeatable manufacturing quality, and reduced non-conformities.</li>
+  
+  <li><strong>Continuous Improvement & Quality Optimization:</strong> Collaborated with cross-functional teams to develop iterative improvements, integrating lessons learned into standardized operating procedures. Contributed to enhancing vehicle waterproofing performance and overall production efficiency.</li>
+  
+  <li><strong>Outcome:</strong> Strengthened skills in quality assurance, lean manufacturing principles, and industrial problem-solving. Achieved measurable improvements in defect reduction, production reliability, and process robustness within a high-volume automotive environment.</li>
+</ul>     
+<!-- Additional Information -->
+       <ul>
+         <li><strong>Tools:</strong> CATIA V5, Autocad, Excel, Pareto Charts, Ishikawa Diagrams, Process Flow Analysis, Control Plans, Root Cause Analysis, Quality Audits</li>
+         <li><strong>Department:</strong> Vehicle Design, Manufacturing & Quality Engineering</li>
+        </ul>
+
+
+    <h3>Photos </h3>
+    <p>Click on any image below to view it in full-screen.</p>
+    <div class="modal-photo-grid">
+      <img src="images/stellantisME.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantisME02.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis REPORT.png" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantisME03.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis projet.png" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis AMI.png.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis cataphearse.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis check liste.png" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis mise a plat .jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantis soudage.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantisME ferrage.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/stellantisME peinture.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/Stellantis montage.png.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/Stellantis peinture.png.jpg" alt="Photo 1" class="lightbox-img-trigger">
+    </div>
+  </div>
+</div>
+
+<!-- ================= YAZAKI Modal ================= -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>YAZAKI – Design and Optimization of Sliding System for Automotive Wiring Production</h2>
+<p>This internship, conducted at the Kénitra industrial site, focused on designing and implementing a mechanical sliding system to streamline automotive wiring production lines. The project combined mechanical design, industrialization, and maintenance management to enhance production efficiency, reliability, and process quality.</p>
+
+<h3>The methodology behind the project realisation:</h3>
+<ul>
+  <li><strong>Mechanical Design & Cycle Time Optimization:</strong> Designed and modeled the guiding and sliding system using <strong>CATIA V5 Surface Modeling</strong>, improving part transfer fluidity and reducing assembly cycle time by <strong>40%</strong>.
+  <li><strong>Industrialization & Process Implementation:</strong> Collaborated with production engineers to standardize the installation and operation of the sliding system, aligning with lean manufacturing principles and minimizing operator handling errors.</li>
+  
+  <li><strong>Maintenance & Equipment Reliability:</strong> Managed preventive and corrective maintenance of production machinery.</li>
+  
+  <li><strong>Continuous Improvement & Quality Assurance:</strong> Monitored system performance, gathered operational feedback, and implemented iterative improvements, ensuring high production reliability, efficiency, and adherence to quality standards.</li>
+  
+  <li><strong>Outcome:</strong> The internship strengthened practical skills in mechanical design, industrial process optimization, maintenance, and continuous improvement, resulting in measurable improvements in production performance and equipment reliability.</li>
+</ul>
+
+<ul>
+  <li><strong>Tools:</strong> CATIA V5, Lean Manufacturing, Preventive & Corrective Maintenance, Time Study, Process Analysis</li>
+  <li><strong>Department:</strong> Technical & Maintenance</li>
+</ul>
+
+    <h3>Photos</h3>
+    <p>Click on any image below to view it in full-screen.</p>
+    <div class="modal-photo-grid">
+      <img src="images/yazaki06.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki repoort.png" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki02.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki03.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki04.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki05.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki07.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki08.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki09.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki10.jpg" alt="Photo 1" class="lightbox-img-trigger">
+      <img src="images/yazaki01.jpg" alt="Photo 1" class="lightbox-img-trigger">
+    </div>
+  </div>
+</div>
+
+<!-- ================= Global Lightbox ================= -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close-lightbox">&times;</span>
+  <img id="lightbox-img" src="" alt="Fullscreen Image">
+</div>
+  </div>
+</div>
+</section>
+<!-------------------------Projects------------------------------------------------>
+<section id="projects-section" class="section-content">
+  <h2 class="section-title animate-on-scroll">Projects</h2>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <article 
+      class="project-card pop-up" 
+      onclick="openProject('project1')">
+      <div class="project-image">
+        <img src="images/1.png" alt="EV Battery Protection Box design" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3>Full Engineering Study on Electric vehicle Battery Safety</h3>
+        <p>
+          Designed a Sandwich honeycomb structure to protect electric vehicle batteries from side impacts and vibrations, from developing the vehicle structure and selecting the right material to performing crash test analyses to find the optimized solution.
+        </p>
+        <div class="project-tags">
+          <span>R&D</span>
+          <span>Structural Design</span>
+          <span>Material Selection</span>
+          <span>Crash Test</span>
+          <span>EV Safety</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article 
+      class="project-card pop-up" 
+      onclick="openProject('project1')">
+      <div class="project-image">
+        <img src="images/ROBOT.jpg" alt="FAI aerospace optimization" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3>Robotics Competition</h3>
+        <p>
+          Designed and programmed a line-following robot powered by an ESP32 camera and Arduino, covering the full process from 3D mechanical design to embedded vision programming, real-time control, and system integration.
+        </p>
+        <div class="project-tags">
+          <span>Arduino</span>
+          <span>ESP 32</span>
+          <span>Python</span>
+          <span>Robotics</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article 
+      class="project-card pop-up" 
+      onclick="openProject('project1')">
+      <div class="project-image">
+        <img src="images/tennis CAE.png" alt="Vehicle waterproofing analysis" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3>Combining my passions for Fluid Analysis and Tennis</h3>
+        <p>
+          Developed a simulation of a gas-filled tennis ball impacting a racket using the Fluid Cavity Method in Abaqus, analyzing pressure dynamics, deformation, and energy transfer between the two bodies.
+        </p>
+        <div class="project-tags">
+          <span>Fluid Cavity</span>
+          <span>FEA</span>
+          <span>Abaqus</span>
+          <span>Tennis :)</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
+    <article 
+      class="project-card pop-up" 
+      onclick="openProject('project1')">
+      <div class="project-image double-image">
+        <img src="images/alpha 3D.png" alt="Vehicle design and simulation" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3>3D Prototyping Two Automotive Structures</h3>
+        <p>
+          Prototyping two automotive structures with a 3D printer, designed to absorb shocks and vibrations, to closely observe their performance and structural behavior.
+        </p>
+        <div class="project-tags">
+          <span>3D printing</span>
+          <span>PLA</span>
+          <span>Prototyping</span>
+          <span>Honeycamb</span>
+          <span>ALPHA</span>
+          <span>Battery</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 5 -->
+    <article 
+      class="project-card pop-up" 
+      onclick="openProject('project1')">
+      <div class="project-image">
+        <img src="images/stellantis projet.png" alt="Vehicle waterproofing analysis" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3>Optimization of the AMI Vehicle Production Process</h3>
+        <p>
+         Implemented quality control and inspection methods to ensure process reliability, enhance production efficiency, and improve overall manufacturing productivity.
+        </p>
+        <div class="project-tags">
+          <span>5P</span>
+          <span>Ishikawa</span>
+          <span>Pareto</span>
+          <span>AMDEC</span>
+          <span>Manufacturing</span>
+          <span>Quality</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 6 -->
+    <article 
+      class="project-card pop-up" 
+      onclick="openProject('project1')">
+      <div class="project-image">
+        <img src="images/fuselage.png" alt="Vehicle waterproofing analysis" loading="lazy">
+      </div>
+      <div class="project-content">
+        <h3>CAD of Fuselage Structure</h3>
+        <p>
+         Performed CAD design and material selection for a fuselage section based on project specifications, in compliance with aeronautical standards
+        </p>
+        <div class="project-tags">
+          <span>Catia</span>
+          <span>Material Selection</span>
+          <span>Granta Edupack</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<!------------------------------------------------------ BLOG SECTION ----------------------------------------------->
+<section id="blog-section" class="section-content">
+  <h2 class="blog-title">Blog</h2>
+
+
+ <p class="blog-subtitle">
+    Here I share what drives me, from the precision of engineering to the beauty of literature.
+  </p>
+
+
+    <!-- TAGS -->
+  <div class="blog-tags">
+    <span class="tag">Mechanical Engineering</span>
+    <span class="tag">Materials science</span>
+    <span class="tag">Computational simulations</span>
+    <span class="tag">Literature</span>
+    <span class="tag">Philosophy</span>
+    <span class="tag">Cinema</span>
+    <span class="tag">Personnel Publications </span>
+  </div>
+  <!-- BLOG CARDS -->
+  <div class="blog-grid">
+
+    <article class="blog-card" onclick="openArticle('article-engineering')">
+      <h1>Fatigue and Failure Analysis of Composite Materials</h1>
+      <p>This publication examines the fatigue behavior and failure mechanisms of composite materials under cyclic loading conditions. Through analysis of stress patterns, crack propagation, and material degradation, I investigate the factors that influence the long-term performance and structural integrity of composite structures.</p>
+      <div class="blog-tags">
+      <span class="tag">Mechanical Engineering</span>
+      <span class="tag">Materials science</span>
+      </div>
+    </article>
+<article class="blog-card" onclick="openArticle('article-engineering')">
+      <h1>Personal Review of The Granada Trilogy <br> (ثلاثية غرناطة) by Radwa Ashour </h1>
+      <p>What does it mean to witness the end of a civilization? Radwa Ashour's Granada Trilogy (ثلاثية غرناطة) explores this haunting question through the eyes of ordinary people living through extraordinary times. This isn't just historical fiction, it's a meditation on memory, resistance, and cultural survival. Here, I share my thoughts on why this trilogy moved me and what it reveals about our own relationship with heritage and loss.</p>
+      <div class="blog-tags">
+      <span class="tag">Literature</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- FULL ARTICLES (hidden) -->
+
+  <article id="article-engineering" class="full-article hidden">
+    <button class="back-btn" onclick="closeArticle()">← Back</button>
+
+
+    <p>
+            Coming soon.
+
+    </p>
+
+  <article id="article-quantum" class="full-article hidden">
+    <button class="back-btn" onclick="closeArticle()">← Back</button>
+    <p>
+      Coming soon.
+    </p>
+
+  
+
+</section>
+
+
+
+
+
+<!------------------------------------------------------ CONTACT SECTION --------------------------------------------->
+<section id="contact" class="section-content">
+  <h2 class="contact-title">Get <span>in Touch.</span></h2>
+
+  <form class="contact-form" name="submit-to-google-sheet">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+
+    <label for="message">Your Text</label>
+    <textarea id="message" name="Message" rows="6" placeholder="Your Text"></textarea>
+
+    <button type="submit" class="btn-send">Send Message</button>
+  </form>
+
+</section>
+  <!-- END Contact Columns -->
+
+ <div class="contact-social">
+  <a href="https://www.linkedin.com/in/yassmine-chahafi/"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+  <a href="http://instagram.com/yassmine_chahafi/"><i class="fa-brands fa-instagram"></i></a>
+</div>
+
+<div class="signature">
+  <img src="images/my_logo_en_gris-without background.png" alt="Logo Yassmine Chahafi">
+</div>
+
+
+
+<!------------------------------------------------------ JS File  -------------------------------------------------->
+<script src="script.js"></script>
+</body>
+<!------------------------------------------------------ SIDE BARS -------------------------------------------------->
+<div class="sidebars" >
+  <!-- Left Sidebar -->
+  <div class="side-left">
+    <ul class="social-links">
+      <li><a href="https://www.linkedin.com/in/yassmine-chahafi/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="http://instagram.com/yassmine_chahafi/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    <div class="vertical-line"></div>
+  </div>
+
+  <!-- Right Sidebar -->
+  <div class="side-right">
+    <a href="mailto:chahafiy@gmail.com" class="email">chahafiy@gmail.com</a>
+    <div class="vertical-line"></div>
+  </div>
+</div>
+
+<!------------------------------------------------------ FOOTER ----------------------------------------------------->  
+
+<!-- ================= Footer ================= -->
+<footer>
+  <p>All rights reserved. © Copyright Yassmine CHAHAFI 2025</p>
+</footer>
+</html>

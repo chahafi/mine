@@ -1,0 +1,230 @@
+.container{width:95%;max-width:1600px;margin:0 auto}
+#about{padding:80px 0;color:#d0d0d0}
+.about-text{font-size:18px;line-height:1.85;color:#fff;margin-bottom:50px;text-align:justify;letter-spacing:.5px;position:relative}
+.about-text p{margin-bottom:22px}
+.highlight-bold{font-weight:700;color:#00BFFF}
+.about-text p:first-child{color:#fff;font-size:19px}
+.about-text p:last-child{margin-top:15px}
+.about-text::first-letter{font-size:60px;font-weight:700;color:#00BFFF;float:left;margin-right:12px;line-height:1}
+.sub-title{font-size:60px;font-weight:700;color:#ababab;margin-bottom:40px;position:relative;text-align:center}
+.tab-titles{display:flex;flex-wrap:wrap;gap:200px;margin-bottom:35px}
+.tab-links{font-size:28px;color:#fff;font-weight:700;cursor:pointer;position:relative;padding-bottom:5px;transition:all .6s ease}
+.tab-links:hover{color:#00BFFF;transform:scale(1.05)}
+.tab-links::after{content:"";position:absolute;bottom:0;left:0;width:0;height:3px;background-color:#00BFFF;transition:width .6s ease}
+.tab-links:hover::after{width:100%}
+.tab-links.active-link::after{width:100%}
+.tab-contents{display:none;width:100%;animation:fadeIn .5s ease-in-out}
+.tab-contents.active-tab{display:block}
+.skill-section{margin-bottom:30px;padding:25px 20px;background:transparent;border-radius:15px;transition:transform .3s ease,box-shadow .3s ease;border:2px solid #00BFFF}
+.skill-section:hover{transform:translateY(-8px)}
+.skill-title{font-size:22px;font-weight:700;color:#00BFFF;margin-bottom:20px;display:block}
+.software-list{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:15px}
+.software-item{background-color:transparent;color:#fff;border:2px solid #fff;border-radius:22px;padding:10px 25px;font-size:15px;font-weight:600;cursor:pointer;text-align:center;transition:all .4s ease}
+.software-item:hover{background-color:#00BFFF;color:#1b1b2f;border-color:#00BFFF;transform:translateY(-3px) scale(1.05);box-shadow:0 6px 14px rgba(0,0,0,.15),0 0 14px rgba(0,191,255,.2)}
+.tab-contents ul{padding-left:0}
+.software-item-02{background-color:none;color:#fff;border:2px solid #fff;border-radius:22px;padding:10px 25px;font-size:15px;font-weight:600;cursor:pointer;text-align:center;transition:all .4s ease}
+.software-item-02:hover{background-color:#00BFFF;color:#1b1b2f;border-color:#00BFFF;transform:translateY(-3px) scale(1.05);box-shadow:0 6px 14px rgba(0,0,0,.15),0 0 14px rgba(0,191,255,.2)}
+
+/* ============================= */
+/* LISTS IN OTHER TABS           */
+/* ============================= */
+.tab-contents ul {
+  padding-left: 0;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 50px 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #d0d0d0;
+  position: relative;
+  padding-right: 140px; /* More room for date */
+}
+
+/* Degree & School Titles */
+.tab-contents ul li .degree,
+.tab-contents ul li .school {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+
+
+.tab-contents ul li .degree {
+  color: #00bfff;
+}
+
+.tab-contents ul li .school {
+  color: #aaaaaa; /* Slightly brighter for readability */
+  margin-top: 3px;
+}
+
+/* ============================= */
+/* DATE STYLING                  */
+/* ============================= */
+.tab-contents ul li .date {
+  color: #a0a0a0;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  top: 0;
+  letter-spacing: 0.2px;
+}
+/* ============================= */
+/* TAB TITLES – RECTANGLE        */
+/* ============================= */
+
+.tab-titles {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin: 0 auto 50px;
+  padding: 18px 40px;
+
+  width: fit-content;
+
+  border-radius: 18px;
+  border: 1.5px solid rgba(0, 191, 255, 0.45);
+  background: none;
+
+  box-shadow:
+    0 0 12px rgba(0, 191, 255, 0.15),   /* lighter outer shadow */
+    inset 0 0 8px rgba(0, 191, 255, 0.04); /* lighter inner shadow */
+
+  backdrop-filter: blur(8px);
+}
+
+/* ============================= */
+/* TAB LINKS                     */
+/* ============================= */
+
+.tab-links {
+  font-size: 30px;
+  font-weight: 700;
+  color: #6f8fa6;               /* inactive */
+  cursor: pointer;
+  position: relative;
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: all 0.35s ease;
+}
+
+/* ACTIVE TAB */
+.tab-links.active-link {
+  color: #00bfff;
+  background: rgba(0, 191, 255, 0.18);
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.3); /* reduced shadow */
+}
+
+/* ============================= */
+/* TAB CONTENTS                  */
+/* ============================= */
+
+.tab-contents {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* ============================= */
+/* ANIMATION                     */
+/* ============================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* -------------------------------------------------- */
+/*  COMPANY LOGO STRIP WRAPPER                        */
+/* -------------------------------------------------- */
+.company-logos-wrapper {
+  overflow: hidden;          /* hide overflowing logos */
+  width: 80%;                /* leave space on left/right */
+  margin: -180px auto 40px;    /* 60px from header, 40px bottom space */
+  background: transparent;
+  padding: 20px 0;           /* vertical padding inside wrapper */
+}
+
+/* -------------------------------------------------- */
+/*  LOGO CONVEYOR STRIP                               */
+/* -------------------------------------------------- */
+.company-logos {
+  display: flex;
+  flex-wrap: nowrap;         /* horizontal scroll only */
+  gap: clamp(20px, 5vw, 50px);
+  animation: scroll-left 5s linear infinite; /* scrolling animation */
+  transition: transform 0.5s ease;
+}
+
+/* Pause conveyor on hover */
+.company-logos:hover,
+.company-logos img:hover {
+  animation-play-state: paused;
+}
+
+/* Individual logos */
+.company-logos img {
+  height: 120px;            /* adjust as needed */
+  max-width: 250px;         /* optional max width */
+  object-fit: contain;
+  flex-shrink: 0;           /* prevent shrinking */
+  opacity: 0.4;
+  transform: translateY(0);
+  filter: brightness(0.95);
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Logo hover effect */
+.company-logos img:hover {
+  opacity: 1;
+  filter: brightness(1.2);
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* -------------------------------------------------- */
+/*  FADE-IN SEQUENTIAL ANIMATION                      */
+/* -------------------------------------------------- */
+.company-logos.fade-in-delayed img {
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+.company-logos.fade-in-delayed img:nth-child(1) { animation-delay: 0.2s; }
+.company-logos.fade-in-delayed img:nth-child(2) { animation-delay: 0.4s; }
+.company-logos.fade-in-delayed img:nth-child(3) { animation-delay: 0.6s; }
+.company-logos.fade-in-delayed img:nth-child(4) { animation-delay: 0.8s; }
+/* Repeat for duplicated logos */
+.company-logos.fade-in-delayed img:nth-child(5) { animation-delay: 1s; }
+.company-logos.fade-in-delayed img:nth-child(6) { animation-delay: 1.2s; }
+.company-logos.fade-in-delayed img:nth-child(7) { animation-delay: 1.4s; }
+.company-logos.fade-in-delayed img:nth-child(8) { animation-delay: 1.6s; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------- */
+/*  SCROLLING ANIMATION                               */
+/* -------------------------------------------------- */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* scroll half of strip width */
+}
+
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}

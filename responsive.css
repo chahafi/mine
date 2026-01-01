@@ -1,0 +1,558 @@
+/* ============================================== */
+/* RESPONSIVE STYLES - ORGANIZED BY BREAKPOINT  */
+/* ============================================== */
+
+/* ============================================== */
+/* MOBILE MENU ICON (ALL SIZES)                  */
+/* ============================================== */
+nav .fas {
+  display: none;
+  color: #1f80ff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+nav .fas:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================== */
+/* DESKTOP/TABLET LARGE: 1024px                  */
+/* ============================================== */
+@media only screen and (max-width: 1024px) {
+  /* Header Photo */
+  .header-photo-wrapper {
+    width: 500px;
+    right: 30px;
+    bottom: 100px;
+  }
+
+  .header-photo-wrapper::before {
+    width: 400px;
+    height: 400px;
+  }
+
+  .header-photo {
+    width: 400px;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    width: 100%;
+    padding-left: 25px;
+    margin-top: 100px;
+  }
+
+  .timeline-item::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item:nth-child(even) {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  /* Tab Titles */
+  .tab-titles {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* ============================================== */
+/* TABLET: 900px                                 */
+/* ============================================== */
+@media (max-width: 900px) {
+  /* Projects */
+  .project-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 230px;
+  }
+
+  .project-content {
+    width: 100%;
+  }
+}
+
+/* ============================================== */
+/* TABLET SMALL: 768px                           */
+/* ============================================== */
+@media only screen and (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 10px 5%;
+  }
+
+  /* Navigation - Mobile Menu */
+  nav .fa-bars {
+    display: block;
+    font-size: 1.6rem;
+    color:  #1f80ff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+    transition: opacity 0.3s ease;
+  }
+
+  nav .fa-circle-xmark {
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #1f80ff;
+    z-index: 1002;
+    transition: opacity 0.3s ease;
+  }
+
+  /* When menu is open, hide hamburger and show X */
+  nav.menu-open .fa-bars {
+    display: none;
+  }
+
+  nav.menu-open .fa-circle-xmark {
+    display: block;
+  }
+
+  nav ul {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.925),
+      rgba(0, 14, 78, 0.941)
+    );
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    max-width: 200px;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  /* Open menu state */
+  nav.menu-open ul {
+    right: 0 !important;
+  }
+
+  /* Ensure menu items don't overflow */
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 5px 0;
+  }
+
+  /* Header */
+  #header .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header {
+    min-height: auto;
+    padding: calc(var(--nav-height) + 40px) 20px 60px;
+  }
+
+  .header-photo-wrapper {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 40px;
+    display: block;
+    order: -1;
+  }
+
+  .header-text {
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+
+  .header-text h1{
+    font-size: 3rem;
+     
+  }
+
+  .header-text h2 {
+    font-size: 2rem;
+  }
+.header-text h3 {
+    font-size: 1.8rem;
+  }
+  .header-text p:first-child {
+    font-size: 1.4rem;
+  }
+ .header-text p {
+    font-size: 1rem;
+     margin-bottom: 30px;
+  }
+  .header-photo {
+    width: 100%;
+  }
+
+  .header-photo-wrapper::before {
+    width: 300px;
+    height: 300px;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+  }
+
+
+
+/* Company Logos - Mobile adjustments */
+/* At 768px */
+.company-logos-wrapper {
+  margin: -40px auto auto;
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.company-logos {
+  gap: 25px;
+  animation: scroll-left 10s linear infinite;
+  width: max-content;
+}
+
+.company-logos img {
+  height: 60px;
+  max-width: 160px;
+  min-width: 160px;
+}
+
+  /* Modal */
+  .modal-photo-grid img {
+    flex: 1 1 45%;
+    max-width: 80%;
+  }
+
+  
+
+  /* Typography */
+  .sub-title,
+  .section-title {
+    font-size: 3.5rem;
+    margin-top: 0ch;
+  }
+
+  .about-text{
+    font-size: 1rem;
+  }
+
+
+.tab-links.active-link{
+    font-size: 1.8rem;
+   }
+
+
+  /* Skills */
+  .skill-title {
+    font-size: 18px;
+  }
+
+   .software-list{
+    gap: 10px;
+   }
+  .software-item {
+    font-size: 12px;
+    padding: 6px 6px;
+  }
+
+  /* Tabs */
+  .tab-titles {
+    gap: 10px;
+    justify-content: center;
+  }
+  
+/* At 768px breakpoint */
+.tab-contents ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-contents li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+#Education p {
+  width: 100%;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.school {
+  font-size: 2rem;
+  display: block;
+  width: 100%;
+}
+
+
+
+
+  /* Timeline */
+.timeline::before {
+  display: none;
+}
+.timeline-item {
+  margin-top: 40px !important;
+  margin-bottom: 1px !important;
+}
+
+.timeline-item:first-child {
+  margin-top: 0 !important;
+}
+.timeline-icon {
+  display: none;
+}
+
+.timeline-item {
+  padding-left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.timeline-item.left .timeline-icon,
+.timeline-item.right .timeline-icon {
+  display: none;
+}
+
+.timeline-item:nth-child(odd),
+.timeline-item:nth-child(even) {
+  align-self: center;
+}
+
+.exp-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.timeline-content h1 {
+  font-size: 2.2rem;
+  text-align: left;
+}
+
+.timeline-content h2,
+.timeline-content h3 {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.date {
+  justify-content: left;
+  font-size: 1rem;
+}
+
+.timeline-summary {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.skills {
+  justify-content: left;
+}
+
+/* At 480px breakpoint */
+.exp-logo {
+  width: 100px;
+  height: 100px;
+}
+.see-more-btn{
+  font-size: large;
+}
+
+
+
+
+  /* Projects */
+  .project-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .project-content {
+    width: 100%;
+    padding: 25px;
+  }
+  
+
+
+  /* Buttons */
+  .buttons {
+    margin-top: 0px;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px 32px;
+  }
+
+  /* Contact */
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+  /* Sidebars */
+  .side-left,
+  .side-right {
+    display: none;
+  }
+}
+
+/* ============================================== */
+/* SMALL MOBILE: 480px                           */
+/* ============================================== */
+@media only screen and (max-width: 480px) {
+  /* Header */
+ 
+
+  .header-photo-wrapper {
+    max-width: 280px;
+  }
+
+  .header-photo-wrapper::before {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* About */
+  .about-text::first-letter {
+    font-size: 60px;
+  }
+
+  .about-text p:first-child {
+    font-size: 14px;
+  }
+
+  .about-text p:last-child {
+    font-size: 14px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 28px;
+    font-size: 16px;
+  }
+
+ 
+  /* Modal */
+  .modal-content {
+    padding: 25px 15px;
+  }
+
+  .modal-photo-grid img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+  }
+
+  .close-btn {
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+  }
+
+  /* Navigation */
+  nav ul {
+    width: 250px;
+    right: -250px;
+  }
+}
+
+
+/* ============================================== */
+/* TOUCH DEVICE IMPROVEMENTS                     */
+/* ============================================== */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets for mobile */
+  .btn {
+    min-height: 48px;
+    padding: 16px 36px;
+  }
+
+  nav ul li a {
+    padding: 12px 0;
+    font-size: 22px;
+  }
+
+  .tab-links {
+    padding: 10px;
+    font-size: 20px;
+    gap: 0;
+  }
+
+  /* Remove hover effects on touch devices */
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* Better button press effect on mobile */
+@media (hover: none) {
+  button:active,
+  .btn:active,
+  a:active {
+    transform: scale(0.97);
+  }
+}

@@ -1,0 +1,98 @@
+/* ============================================== */
+/* BUTTON CONTAINER - MODERN LAYOUT               */
+/* ============================================== */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* ============================================== */
+/* BUTTON BASE - SLICKER DESIGN                   */
+/* ============================================== */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Glass effect pseudo-element */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* ============================================== */
+/* PRIMARY BUTTON - FILLED STYLE                  */
+/* ============================================== */
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #00bfff 0%, #0099cc 100%);
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0099cc 0%, #007acc 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 191, 255, 0.3);
+}
+
+/* ============================================== */
+/* OUTLINE BUTTON - GLASS STYLE                   */
+/* ============================================== */
+.btn-outline {
+  color: #fff;
+  background: rgba(0, 191, 255, 0.08);
+  border: 2px solid #00bfff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  background: rgba(0, 191, 255, 0.15);
+  border-color: #33ccff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 191, 255, 0.25);
+  color: #33ccff;
+}
+
+
+/* ============================================== */
+/* BUTTON ACTIVE STATE                            */
+/* ============================================== */
+.btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
